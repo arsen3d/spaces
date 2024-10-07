@@ -1,23 +1,35 @@
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [filesContent, setFilesContent] = useState([]);
+
+  useEffect(() => {
+    const context = require.context('!!raw-loader!./gradio-lite', false, /\.py$/);
+    const files = context.keys().map((key) => ({
+      fileName: key.replace('./', ''),
+      content: context(key).default,
+    }));
+    setFilesContent(files);
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header >
+        <div></div>
+     
       </header>
+      <div>
+        <h2>Files Content</h2>
+        <gradio-lite style={{display:"none"}} entrypoint shared-worker>import gradio as gr</gradio-lite>
+        {filesContent.map((file, index) => (
+          <div key={index}>
+            <h3>{file.fileName}</h3>
+            <gradio-lite shared-worker>{file.content}</gradio-lite>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
