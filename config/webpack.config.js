@@ -8,4 +8,10 @@ module.exports = {
         },
       ],
     },
+    entry: './src/index.js',
+    output: {
+      path: path.resolve(__dirname, 'dist/spaces'),
+      filename: 'bundle.js',
+      publicPath: '/spaces/'
+    },
   };
