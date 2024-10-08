@@ -22,13 +22,15 @@ function App() {
       </header>
       <div>
         <h2>Files Content</h2>
+        <div className="cards-container">
         <gradio-lite style={{display:"none"}} entrypoint shared-worker>import gradio as gr</gradio-lite>
         {filesContent.map((file, index) => (
-          <div key={index}>
+          <div key={index} className="card">
             <h3>{file.fileName}</h3>
             <gradio-lite shared-worker>{file.content}</gradio-lite>
           </div>
         ))}
+        </div>
       </div>
     </div>
   );

@@ -17,4 +17,11 @@ def greet(message):
     except requests.RequestException as e:
         return f"Error: {e}"
 
-gr.Interface(greet, "textbox", "textbox").launch()
+with gr.Blocks() as demo:
+    textbox = gr.Textbox(label="Input Prompt")
+    output = gr.Textbox(label="Response Message")
+    submit_button = gr.Button("Send Message")
+    
+    submit_button.click(greet, inputs=textbox, outputs=output)
+
+demo.launch()
