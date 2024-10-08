@@ -16,7 +16,8 @@
     "start": "react-scripts start",
     "build": "BUILD_PATH=apps react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "publish": "npm run build && git add . && git commit -m 'Update' && git push"
   },
   "eslintConfig": {
     "extends": [
