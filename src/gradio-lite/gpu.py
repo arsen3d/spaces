@@ -20,8 +20,8 @@ def greet():
         return f"Error: {e}"
 
 with gr.Blocks() as demo:
-    output = gr.Textbox(label="info")
-    btn = gr.Button("Get GPU Info")
+    output = gr.Textbox(label="GPU")
+    btn = gr.Button("Get Info")
     btn.click(greet, inputs=None, outputs=output)
 
 demo.launch()

@@ -18,7 +18,7 @@ def greet(message):
         return f"Error: {e}"
 
 with gr.Blocks() as demo:
-    textbox = gr.Textbox(label="Input Prompt")
+    textbox = gr.Textbox(label="Cow Say")
     output = gr.Textbox(label="Response Message")
     submit_button = gr.Button("Send Message")
     

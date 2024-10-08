@@ -16,7 +16,7 @@ def generateImage(prompt):
         return f"Error: {e}"
 
 with gr.Blocks() as demo:
-    prompt = gr.Textbox(label="Prompt")
+    prompt = gr.Textbox(label="SDXL")
     output = gr.Image(label="Generated Image")
     generate_button = gr.Button("Generate Image")
     generate_button.click(generateImage, inputs=prompt, outputs=output)
