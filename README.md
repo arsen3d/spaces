@@ -9,7 +9,7 @@ Spaces is a platform designed for running distributed GPU jobs, supported by a v
 - **Easy Deployment**: Deploy your models and computational tasks with ease, using a user-friendly interface and robust backend infrastructure.
 - **Collaboration**: Collaborate with other users, share your work, and contribute to community projects.
 
-## [Learn More](/build)
+## [Apps Demo](/apps)
 
 You can learn more in the [Spaces documentation](https://spaces.example.com/docs/getting-started).
 
