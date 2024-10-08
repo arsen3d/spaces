@@ -10,8 +10,8 @@ module.exports = {
     },
     entry: './src/index.js',
     output: {
-      path: path.resolve(__dirname, 'dist/spaces/build'),
+      path: path.resolve(__dirname, 'dist/build'),
       filename: 'bundle.js',
-      publicPath: '/spaces/build'
+      publicPath: '/build'
     },
   };
