@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  gradio-app:
+    build: .
+    container_name: gradio_app
+    volumes:
+      - ../src/gradio-lite:/app
+    working_dir: /app
+    command: bash -c "python cowsay.py"
+    ports:
+      - "7860:7860"

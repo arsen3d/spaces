@@ -24,4 +24,4 @@ with gr.Blocks() as demo:
     
     submit_button.click(greet, inputs=textbox, outputs=output)
 
-demo.launch()
+demo.launch(server_name="0.0.0.0")
