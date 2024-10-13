@@ -10,7 +10,7 @@ def generateImage(prompt):
                 "value": prompt
             }
         })
-        # response.raise_for_status()
+        response.raise_for_status()
         dataid = response.json()["dataid"]
         return f'https://api.devnet.arsenum.com/files/{dataid}/outputs/output.png'
         # return "https://api.devnet.arsenum.com/files/Qmahu31US6txbTaMeLqG16bZyjouEYbHs54thLxkoU1625/outputs/output.png"

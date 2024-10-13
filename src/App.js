@@ -37,3 +37,5 @@ function App() {
 }
 
 export default App;
+//todo https://www.gradio.app/custom-components/gallery
+//https://huggingface.co/spaces/enzostvs/zero-gpu-spaces

@@ -11,9 +11,7 @@ def greet(message):
         })
         response.raise_for_status()
         response = requests.get(f'https://api.devnet.arsenum.com/files/{response.json()["dataid"]}/stdout')
-
         return response.text
-        #//"Hello, " + data['result'] + "!!!!!"
     except requests.RequestException as e:
         return f"Error: {e}"
 
